@@ -1,5 +1,5 @@
 /*
-**Answer: What are the top skills based on salary?** 
+**Answer: What are the top skills based on salary in Belgium?** 
 
 - Look at the average salary associated with each skill for Data Analyst positions.
 - Focuses on roles with specified salaries, regardless of location.
@@ -15,8 +15,9 @@ FROM
 	INNER JOIN
 	  skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
-  job_postings_fact.job_title_short = 'Data Analyst' 
-  AND job_postings_fact.salary_year_avg IS NOT NULL 
+  job_postings_fact.job_title_short = 'Data Analyst' AND 
+    job_location LIKE '%Belgium%' AND
+  job_postings_fact.salary_year_avg IS NOT NULL 
 	-- AND job_work_from_home = True  -- optional to filter for remote jobs
 GROUP BY
   skills_dim.skills 

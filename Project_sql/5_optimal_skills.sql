@@ -19,13 +19,13 @@ WITH skills_demand AS (
 	  INNER JOIN
 	    skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
   WHERE
-    job_postings_fact.job_title_short = 'Data Analyst'
-		AND job_postings_fact.salary_year_avg IS NOT NULL
+    job_postings_fact.job_title_short = 'Data Analyst'AND 
+    job_postings_fact.salary_year_avg IS NOT NULL
     AND job_postings_fact.job_work_from_home = True
   GROUP BY
     skills_dim.skill_id
 ),
--- Skills with high average salaries for Data Analyst roles
+-- Skills with high average salaries for Business Analyst roles
 -- Use Query #4 (but modified)
 average_salary AS (
   SELECT
@@ -37,7 +37,7 @@ average_salary AS (
 	    skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
 	  -- There's no INNER JOIN to skills_dim because we got rid of the skills_dim.name 
   WHERE
-    job_postings_fact.job_title_short = 'Data Analyst'
+    job_postings_fact.job_title_short = 'Data Analyst' 
 		AND job_postings_fact.salary_year_avg IS NOT NULL
     AND job_postings_fact.job_work_from_home = True
   GROUP BY
@@ -50,7 +50,8 @@ SELECT
   ROUND(average_salary.avg_salary, 2) AS avg_salary --ROUND to 2 decimals 
 FROM
   skills_demand
-	INNER JOIN
+
+INNER JOIN
 	  average_salary ON skills_demand.skill_id = average_salary.skill_id
 -- WHERE demand_count > 10
 ORDER BY

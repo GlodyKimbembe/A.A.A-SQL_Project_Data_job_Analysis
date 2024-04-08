@@ -1,7 +1,7 @@
 /*
-**Question: What are the most in-demand skills for data analysts?**
+**Question: What are the most in-demand skills for Data analysts? in Belgium**
 
-- Identify the top 5 in-demand skills for a data analyst.
+- Identify the top 5 in-demand skills for a Data analyst in belgium.
 - Focus on all job postings.
 - Why? Retrieves the top 5 skills with the highest demand in the job market, providing insights into the most valuable skills for job seekers.
 */
@@ -16,7 +16,9 @@ FROM
     skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
   -- Filters job titles for 'Data Analyst' roles
-  job_postings_fact.job_title_short = 'Data Analyst'
+    job_postings_fact.job_title_short = 'Data Analyst' AND
+    job_title_short = 'Data Analyst' AND
+    job_location LIKE '%Belgium%'  
 	-- AND job_work_from_home = True -- optional to filter for remote jobs
 GROUP BY
   skills_dim.skills

@@ -1,5 +1,5 @@
 /*
-**Question: What are the top-paying data analyst jobs, and what skills are required?** 
+**Question: What are the top-paying Data analyst jobs, and what skills are required?** 
 
 - Identify the top 10 highest-paying Data Analyst jobs and the specific skills required for these roles.
 - Filters for roles with specified salaries that are remote
@@ -19,8 +19,8 @@ FROM
     job_postings_fact
 LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
 WHERE 
-    Job_title_short = 'Data Analyst' AND
-    job_location = '' AND
+    job_title_short = 'Data Analyst' AND
+    job_location LIKE '%Belgium%' AND
     salary_year_avg is NOT NULL
 ORDER BY 
     salary_year_avg DESC

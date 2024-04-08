@@ -1,7 +1,7 @@
 /*
-Question: What are the top-paying data analyst jobs?**
+Question: What are the top-paying Data analyst jobs?**
 
-- Identify the top 10 highest-paying Data Analyst roles that are available in  Paris.
+- Identify the top 10 highest-paying Data Analyst roles that are available in Brussels,.
 - Focuses on job postings with specified salaries.
 - Why? Aims to highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility.
 */
@@ -17,8 +17,8 @@ FROM
     job_postings_fact
 LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
 WHERE 
-    Job_title_short = 'Data Analyst' AND
-    job_location = 'Anywhere' AND
+    job_title_short = 'Data Analyst' AND
+    job_location LIKE '%Belgium%' AND
     salary_year_avg is NOT NULL
 ORDER BY 
     salary_year_avg DESC
