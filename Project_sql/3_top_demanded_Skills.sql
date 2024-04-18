@@ -5,7 +5,7 @@
 - Focus on all job postings.
 - Why? Retrieves the top 5 skills with the highest demand in the job market, providing insights into the most valuable skills for job seekers.
 */
-SELECT
+Select 
   skills_dim.skills,
   COUNT(skills_job_dim.job_id) AS demand_count
 FROM
@@ -24,4 +24,4 @@ GROUP BY
   skills_dim.skills
 ORDER BY
   demand_count DESC
-LIMIT 5;
+LIMIT 20;
