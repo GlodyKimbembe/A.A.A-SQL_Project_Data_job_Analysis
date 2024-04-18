@@ -24,7 +24,6 @@ Here's how I approached each question:
 ### 1. Top Paying Data Analyst Jobs in Belgium
 To identify the highest-paying roles, I filtered data analyst positions by average yearly salary and location, focusing on jobs from Belgium. This query highlights the high paying opportunities in the field.
 
--- ***COPY THE 5 QUERIES
 ### 1. Top-Paying Data Analyst Job in Belgium**
 ```sql
 SELECT 
@@ -85,7 +84,7 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY 
     Salary_year_avg DESC;
 ```
-### Here's the breakdown of the most demanded skills for data analysts in 2023 in Belgium, based on job postings:
+ Here's the breakdown of the most demanded skills for data analysts in 2023 in Belgium, based on job postings:
 - Azure is the most frequently mentioned skill, appearing in 6 job postings.
 - SQL follows closely, required in 5 postings.
 - AWS, NoSQL, and Flow each appear in 4 postings.
@@ -118,7 +117,7 @@ ORDER BY
   demand_count DESC
 LIMIT 20;
 ```
-Here's what the top rows of your dataset look like, showing the five most demanded skills:
+Here's the insights showing the five most demanded skills:
 
 - SQL with a demand count of 1495
 - Excel with 1012
@@ -152,7 +151,7 @@ ORDER BY
   ```
   The analysis and visualization of average salaries by skill for data analysts show:
 
-- Top skills such as Java, BigQuery, Scala, Spark, GCP, and Snowflake are associated with the highest average salary of $165,000. These skills are generally related to big data technologies and cloud platforms, indicating high demand and lucrative compensation in these areas.
+- Top skills such as Java, BigQuery, Scala, Spark, GCP, and Snowflake are associated with the highest average salary of €165,000. These skills are generally related to big data technologies and cloud platforms, indicating high demand and lucrative compensation in these areas.
 - NoSQL and Flow also command high salaries, slightly below the top tier, reflecting their importance in handling unstructured data and data workflows respectively.
 - More foundational or widely-used skills like SQL, Azure, and AWS have lower average salaries compared to the specialized big data skills, but still command respectable figures.
 - On the lower end, skills like Excel, PowerPoint, and Go show significantly lower average salaries, which could reflect their broader accessibility and lower specialization requirements.
@@ -246,10 +245,10 @@ Jumping into SQL for this data job market project was like diving into a new adv
 From the analysis, several general insights emerged:
 
 1. **Top-Paying Data Analyst Job in Belgium**: The highest-paying jobs for data analysts in Belgium offer a wide range of salaries, the highest at €165000.00!
-2. **Skills for Top-Paying Jobs in Belgium**: High-paying data analyst jobs require advanced proficiency in SQL, suggesting it’s a critical skill for earning a top salary.
-3. **Most In-Demand Skills in Belgium**: SQL is also the most demanded skill in the data analyst in the belgian job market, thus making it essential for job seekers.
-4. **Skills with Higher Salaries in Belgium**: Specialized skills, such as SVN and Solidity, are associated with the highest average salaries, indicating a premium on niche expertise.
-5. **Optimal Skills for Job Market Value**: SQL leads in demand and offers for a high average salary, positioning it as one of the most optimal skills for data analysts to learn to maximize their market value.
+2. **Skills for Top-Paying Jobs in Belgium**: High-paying data analyst jobs require advanced proficiency in Azure, suggesting it’s a critical skill for earning a top salary.
+3. **Most In-Demand Skills in Belgium**: SQL is the most demanded skill in the data analyst in the belgian job market, thus making it essential for job seekers.
+4. **Skills with Higher Salaries in Belgium**: Specialized skills, such as Java, BigQuery, Scala, Spark, GCP, and Snowflake are associated with the highest average salaries, indicating a premium on niche expertise.
+5. **Optimal Skills for Job Market Value**: Python leads in demand and offers for a high average salary, positioning it as one of the most optimal skills for data analysts to learn to maximize their market value.
 
 ### **Conclusion**
 
