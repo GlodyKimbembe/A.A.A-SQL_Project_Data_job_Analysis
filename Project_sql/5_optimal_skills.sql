@@ -1,4 +1,4 @@
--- Identifies skills in high demand for Data Analyst roles
+-- Identifies skills in high demand for Data Analyst roles in Belgium
 -- Use Query #3 (but modified)
 /*
 **Answer: What are the most optimal skills to learn (aka it’s in high demand and a high-paying skill) for a data analyst?** 
