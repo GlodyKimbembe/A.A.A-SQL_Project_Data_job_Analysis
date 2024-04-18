@@ -1,7 +1,7 @@
 /*
 Question: What are the top-paying Data analyst jobs?**
 
-- Identify the top 10 highest-paying Data Analyst roles that are available in Brussels,.
+- Identify the top 10 highest-paying Data Analyst roles that are available in Belgium,.
 - Focuses on job postings with specified salaries.
 - Why? Aims to highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility.
 */
