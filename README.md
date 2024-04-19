@@ -47,10 +47,10 @@ LIMIT 10;
 ```
 The distribution of annual salaries for the top 10 data analyst roles you provided shows the following insights:
 
-- The average (mean) salary is approximately $132,726.
-- The range of salaries spans from $80,850 to $165,000, indicating a wide spread depending on the specific role or location.
-- The median salary is $137,479, slightly higher than the average, reflecting a top-heavy distribution towards the higher end.
-- The majority of job postings offer salaries between $111,175 and $165,000, with a significant concentration at the upper end, as seen in the histogram.
+- The average (mean) salary is approximately €132,726.
+- The range of salaries spans from $80,850 to €165,000, indicating a wide spread depending on the specific role or location.
+- The median salary is €137,479, slightly higher than the average, reflecting a top-heavy distribution towards the higher end.
+- The majority of job postings offer salaries between €111,175 and €165,000, with a significant concentration at the upper end, as seen in the histogram.
 ![Top paying job](Project_sql/asests/1_Top_paying_job.png)
 ### 2. Skills for Top-Paying Jobs in Belgium**
 ```sql
