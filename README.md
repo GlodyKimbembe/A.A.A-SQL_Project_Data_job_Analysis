@@ -108,11 +108,9 @@ FROM
   INNER JOIN
     skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
-  -- Filters job titles for 'Data Analyst' roles
     job_postings_fact.job_title_short = 'Data Analyst' AND
     job_title_short = 'Data Analyst' AND
     job_location LIKE '%Belgium%'  
-	-- AND job_work_from_home = True -- optional to filter for remote jobs
 GROUP BY
   skills_dim.skills
 ORDER BY
@@ -145,7 +143,6 @@ WHERE
   job_postings_fact.job_title_short = 'Data Analyst' AND 
     job_location LIKE '%Belgium%' AND
   job_postings_fact.salary_year_avg IS NOT NULL 
-	-- AND job_work_from_home = True  -- optional to filter for remote jobs
 GROUP BY
   skills_dim.skills 
 ORDER BY
@@ -181,8 +178,6 @@ WITH skills_demand AS (
   GROUP BY
     skills_dim.skill_id
 ),
--- Skills with high average salaries for Business Analyst roles
--- Use Query #4 (but modified)
 average_salary AS (
   SELECT
     skills_job_dim.skill_id,
@@ -191,7 +186,6 @@ average_salary AS (
     job_postings_fact
 	  INNER JOIN
 	    skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
-	  -- There's no INNER JOIN to skills_dim because we got rid of the skills_dim.name 
   WHERE
     job_postings_fact.job_title_short = 'Data Analyst' 
 		AND job_postings_fact.salary_year_avg IS NOT NULL
@@ -199,7 +193,6 @@ average_salary AS (
   GROUP BY
     skills_job_dim.skill_id
 )
--- Return high demand and high salaries for 10 skills 
 SELECT
   skills_demand.skills,
   skills_demand.demand_count,
@@ -209,11 +202,10 @@ FROM
 
 INNER JOIN
 	  average_salary ON skills_demand.skill_id = average_salary.skill_id
--- WHERE demand_count > 10
 ORDER BY
   demand_count DESC, 
 	avg_salary DESC
-LIMIT 10 --Limit 25
+LIMIT 10 
 ; 
 ```
 Key observations from the plot:
